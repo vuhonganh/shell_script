@@ -19,4 +19,15 @@ printf "\e[1;31m%s \e[0m \n"  "This is a red text"
 
 printf "\e[1;33m%s\n\e[0m" "Best pratice: Should use printf for portability"
 
+number=5
+fruit=apple
+
+printf "printf with double quotes: We have ${number} ${fruit}(s)\n"
+printf 'printf With single quotes: it does not work: We have ${number} ${fruit}(s)\n'
+
+echo echo '$fruit' will print \$fruit
+echo echo "$fruit" will print apple - the value of this variable
+
+length=${#fruit}
+echo A way to get the length of a variable : '${#fruit} = ' $length
 echo "Enough for printing now"
