@@ -57,3 +57,12 @@ printf  "\e[1;33m%s\n\e[0m" "the above scale=2 does not work for explicit additi
 printf  "\n\e[1;33m%s\n\e[0m" "Base conversion with bc: use:  result=\`echo \"obase=2;9\" | bc"
 result=`echo "obase=2;9" | bc`
 echo '$result' = $result
+
+printf  "\n\e[1;33m%s\n\e[0m" "Some others operations with bc :  result=\`echo \"sqrt(100)\" | bc"
+result=`echo "sqrt(100)" | bc`
+echo '$result' = $result
+
+printf  "\n\e[1;33m%s\n\e[0m" "Some others operations with bc :  result=\`echo \"2^5\" | bc"
+result=`echo "2^5" | bc`
+echo '$result' = $result
+
