@@ -14,6 +14,8 @@ fi
 
 echo -n Count\:;
 tput sc; #store the cursor position
+echo -n THIS_WILL_BE_REMOVED_BY tput ed
+sleep 2
 
 while true;
 do
@@ -21,7 +23,7 @@ do
 	let count++;
 	sleep 0.5;
 	tput rc;  #restore the cursor position
-	#tput ed;  #to clear to the end of screen, however this takes no effect if i comment it so do not know what is this for
+	tput ed;  #to clear to the end of screen, however this only takes effect if we have some previous stuff longer than current stuff printed (than the previous longer part will be removed completely
 	echo -n $count;
     else 
 	printf "\n%s\n" "Done counting"
