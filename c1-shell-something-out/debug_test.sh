@@ -7,6 +7,8 @@
 #set -v : display input when they are read and almost every things in the script (stronger effect than set -x )
 #set +v : disable printing input
 
+#another trick is to put one of these flags -xv, -x, -v next to shebang: #!/bin/bash -xv for example 
+
 function DEBUG()
 {
 	[ "${_DEBUG}" == "on" ] && $@ || :  # : tell the bash to do nothing
