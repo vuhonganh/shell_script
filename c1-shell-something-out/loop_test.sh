@@ -9,14 +9,14 @@ for ((i=1; i < 6; i++))
 
 for i in {1..5};
 do
-    [ $i == 1 ] && printf "\n\e[1;33m%s \e[0m\n" "using for loop: in, do, done";
+    [ $i == 1 ] && printf "\n\e[1;33m%s \e[0m\n" "using for loop: for i in X, do, done";
     echo $i;
 done
 
 i=1;
 while [ $i -lt 6 ];
 do
-    [ $i == 1 ] && printf "\n\e[1;33m%s \e[0m\n" "using while loop: condition, do, done, REMEMBER TO USE -le instead of < " ;
+    [ $i == 1 ] && printf "\n\e[1;33m%s \e[0m\n" "using while loop: while condition, do, done, REMEMBER TO USE -le instead of < " ;
     echo $i;
     let i++;
 done
@@ -29,3 +29,12 @@ echo echo \{H..h\} \: `echo {H..h}`;
 echo
 printf "\e[1;33m%s \e[0m" "use printf: " `printf "%s " {1..5}`;
 echo
+
+
+i=1;
+until [ $i -eq 10 ];
+do
+    [ $i == 1 ] && printf "\n\e[1;33m%s \e[0m\n" "using until loop: until condition [ \$i -eq 10 ] is not met , do, done";
+    echo $i;
+    let i++;
+done
